@@ -2,14 +2,37 @@
 
 @import "tailwindcss";
 
-@layer {
-  base {
-    body {
-      font-family: "Inter", sans-serif;
-    }
+@theme {
+  --color-black: #1b1c1e;
+
+  --font-inter: Inter, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+    color: #1b1c1e;
+    background: #ecfdf5;
+  }
+  h1 {
+    @apply text-7xl font-semibold text-center;
+  }
+  .subheading {
+    @apply text-2xl font-normal;
+  }
+  h2 {
+    @apply text-4xl font-semibold text-center;
+  }
+  h3 {
+    @apply text-2xl font-medium text-center;
   }
 }
 
-@theme {
-  --color-primary:gree
+@layer components {
+  .nav-link-text {
+    @apply text-lg font-normal;
+  }
+  .button {
+    @apply text-lg font-semibold px-7 py-[14px] bg-green-500;
+  }
 }
